@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A responsive ecommerce storefront concept with product filters and a working demo cart by Bipul Kumar.">
+    <meta name="theme-color" content="#f6f3ed">
+    <title>Morrow &amp; Form — Home Goods Store Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#shop">Skip to products</a>
+    <div class="announcement">Complimentary shipping on orders over $100 <span aria-hidden="true">✳</span> Made for slower, softer mornings</div>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Morrow and Form, home">morrow<span>&amp;</span>form<span class="wordmark-dot">.</span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#details">Details</a></nav>
+      <button class="cart-trigger" id="open-cart" type="button" aria-haspopup="dialog" aria-controls="cart-dialog"><span>Bag</span><b id="cart-count">0</b><span class="bag-icon" aria-hidden="true">⌑</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy"><p class="eyebrow"><span aria-hidden="true">✳</span> EVERYDAY OBJECTS, MADE TO LAST</p><h1 id="hero-title">Make room<br>for <em>slow.</em></h1><p>Quietly useful pieces for thoughtful homes. Made to be reached for, used, and loved every day.</p><div class="hero-actions"><a class="button button-dark" href="#shop">Shop the collection <span aria-hidden="true">↘</span></a><span class="hero-note">Small-batch forms · Natural materials</span></div><div class="hero-index"><span>01</span><i></i><span>06</span><span>THE EVERYDAY EDIT</span></div></div>
+        <div class="hero-art hero-vase" aria-hidden="true"><span class="hero-sun"></span><span class="hero-shape shape-vase"></span><span class="hero-shape shape-bowl"></span><span class="hero-branch branch-one"></span><span class="hero-branch branch-two"></span><span class="hero-side-label">FORM · FUNCTION · FEELING</span><span class="hero-sticker">OBJECTS<br>FOR LIVING</span></div>
+      </section>
+
+      <section class="shop-section" id="shop" aria-labelledby="shop-title">
+        <div class="section-intro"><div><p class="eyebrow">THE CONSIDERED COLLECTION</p><h2 id="shop-title">Find your everyday <em>favorite.</em></h2></div><p>Simple shapes. Honest materials.<br>A little more joy in the day.</p></div>
+        <div class="shop-toolbar"><div class="category-filters" role="group" aria-label="Filter products by category"><button class="category-button is-active" data-category="all" aria-pressed="true" type="button">Everything <span>06</span></button><button class="category-button" data-category="Ceramics" aria-pressed="false" type="button">Ceramics</button><button class="category-button" data-category="Textiles" aria-pressed="false" type="button">Textiles</button><button class="category-button" data-category="Lighting" aria-pressed="false" type="button">Lighting</button><button class="category-button" data-category="Storage" aria-pressed="false" type="button">Storage</button></div><div class="shop-tools"><label class="product-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Search products</span><input id="product-search" type="search" placeholder="Search objects"></label><label class="sort-select"><span class="visually-hidden">Sort products</span><select id="sort-products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select></label></div></div>
+
+        <div class="product-grid" id="product-grid">
+          <article class="product-card" data-product="mug"><div class="product-art art-mug" aria-hidden="true"><span class="art-shadow"></span><span class="mug-shape"><i></i></span><span class="art-number">01 / CERAMICS</span></div><div class="product-meta"><div><p class="product-category">CERAMICS</p><h3>Sunday Stoneware Mug</h3></div><span class="product-price">$32</span></div><p class="product-description">A hand-finished mug with a soft, easy-to-hold curve.</p><button class="add-button" type="button" data-add="mug">Add to bag <span aria-hidden="true">＋</span></button></article>
+          <article class="product-card" data-product="basket"><div class="product-art art-basket" aria-hidden="true"><span class="art-shadow"></span><span class="basket-shape"><i></i><b></b></span><span class="art-number">02 / STORAGE</span></div><div class="product-meta"><div><p class="product-category">STORAGE</p><h3>Gather Woven Basket</h3></div><span class="product-price">$58</span></div><p class="product-description">A natural catch-all for the things you reach for most.</p><button class="add-button" type="button" data-add="basket">Add to bag <span aria-hidden="true">＋</span></button></article>
+          <article class="product-card" data-product="throw"><div class="product-art art-throw" aria-hidden="true"><span class="art-shadow"></span><span class="throw-shape"><i></i><b></b></span><span class="art-number">03 / TEXTILES</span></div><div class="product-meta"><div><p class="product-category">TEXTILES</p><h3>Soft Morning Throw</h3></div><span class="product-price">$86</span></div><p class="product-description">Lightweight cotton with a woven edge and a lived-in feel.</p><button class="add-button" type="button" data-add="throw">Add to bag <span aria-hidden="true">＋</span></button></article>
+          <article class="product-card" data-product="lamp"><div class="product-art art-lamp" aria-hidden="true"><span class="art-shadow"></span><span class="lamp-base"></span><span class="lamp-shade"></span><span class="lamp-stem"></span><span class="art-number">04 / LIGHTING</span></div><div class="product-meta"><div><p class="product-category">LIGHTING</p><h3>Little Hour Table Lamp</h3></div><span class="product-price">$118</span></div><p class="product-description">A warm pool of light for late pages and early starts.</p><button class="add-button" type="button" data-add="lamp">Add to bag <span aria-hidden="true">＋</span></button></article>
+          <article class="product-card" data-product="bowl"><div class="product-art art-bowl" aria-hidden="true"><span class="art-shadow"></span><span class="bowl-shape"><i></i></span><span class="art-number">05 / CERAMICS</span></div><div class="product-meta"><div><p class="product-category">CERAMICS</p><h3>Daybreak Serving Bowl</h3></div><span class="product-price">$64</span></div><p class="product-description">A generous, hand-thrown shape for shared tables.</p><button class="add-button" type="button" data-add="bowl">Add to bag <span aria-hidden="true">＋</span></button></article>
+          <article class="product-card" data-product="cushion"><div class="product-art art-cushion" aria-hidden="true"><span class="art-shadow"></span><span class="cushion-shape"><i></i></span><span class="art-number">06 / TEXTILES</span></div><div class="product-meta"><div><p class="product-category">TEXTILES</p><h3>Everywhere Cushion</h3></div><span class="product-price">$48</span></div><p class="product-description">Textured linen with a relaxed shape and soft corners.</p><button class="add-button" type="button" data-add="cushion">Add to bag <span aria-hidden="true">＋</span></button></article>
+        </div>
+        <p class="no-products" id="no-products" hidden>No objects match that search. Try a different phrase.</p>
+        <div class="shop-bottom"><span>Thoughtful things for everyday living.</span><span>Designed for this portfolio demo by Bipul Kumar <b aria-hidden="true">✳</b></span></div>
+      </section>
+
+      <section class="story-section" id="story" aria-labelledby="story-title"><div class="story-mark" aria-hidden="true">M<span>&amp;</span>F</div><div><p class="eyebrow">A NOTE ON MAKING</p><h2 id="story-title">Fewer things.<br>Better <em>feelings.</em></h2><p>We believe the everyday deserves a little attention. Morrow &amp; Form is a small storefront concept built around warm materials, useful forms, and a slower way to shop.</p></div><a href="#shop" class="story-link">Explore the edit <span aria-hidden="true">↗</span></a></section>
+
+      <section class="details-strip" id="details"><div><span>01</span><strong>Useful by design</strong><p>Easy to reach for, easy to live with.</p></div><div><span>02</span><strong>Made for everyday</strong><p>Thoughtful details, not fussy ones.</p></div><div><span>03</span><strong>Good from day one</strong><p>A small lift to the everyday routine.</p></div></section>
+    </main>
+
+    <footer class="site-footer"><a class="wordmark" href="#top">morrow<span>&amp;</span>form<span class="wordmark-dot">.</span></a><p>A responsive storefront concept by Bipul Kumar.</p><span>© <span id="year">2026</span> · DEMO STORE</span></footer>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title"><div class="cart-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cart-title">Shopping bag <span id="dialog-cart-count">0</span></h2></div><button class="close-cart" id="close-cart" type="button" aria-label="Close shopping bag">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><span aria-hidden="true">⌑</span><strong>Your bag is taking a little rest.</strong><p>Add an everyday favorite to get started.</p></div><div class="cart-bottom"><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">$0</strong></div><p>Shipping and taxes are calculated at checkout.</p><button class="checkout-button" id="checkout" type="button">Continue to checkout <span aria-hidden="true">↗</span></button><p class="demo-note" id="checkout-note" role="status" aria-live="polite">Demo checkout only · no payment is processed</p></div></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
